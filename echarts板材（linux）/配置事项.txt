@@ -1,0 +1,19 @@
+1、linux上安装java jdk.1.8
+2、linux上安装mysql 并且打开服务，安装教程在  https://blog.csdn.net/wlh525/article/details/98482660
+3、使用rz上传 .jar和.sql这两个文件
+4、进入到mysql当中，导入数据库.sql文件
+5、show table 查看是否有创建成功
+6、输入  nohup java -jar steel_chart-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &  
+（执行这个jar文件，打开springboot项目）
+7、为了项目能够正常启动，还要把机器的环境查看一下
+8、systemctl status firewalld  查看防火墙，如果看到绿色的active，就关掉
+9、systemctl stop firewalld
+10、输入getenforce 
+11、 vim /etc/selinux/config   这个是linux Security的
+12、将里面的  SETLINUX   改为  SELINUX=disabled
+13、输入 setenforce 0  关闭防火墙
+14、ip a 查看地址 （我的为  192.168.126.129）
+15、在windows上的 浏览器输入 你的ip地址加  :8080 ,例如我的就是  192.168.126.129:8080
+
+
+
